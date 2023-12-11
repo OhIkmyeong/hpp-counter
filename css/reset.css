@@ -1,0 +1,21 @@
+@charset "utf-8";
+:root{
+    --f-family : 'Orbitron', sans-serif;
+}
+
+*{margin:0;padding:0; box-sizing:border-box;}
+li{list-style-type:none;}
+
+html,body{
+    font-family:var(--f-family);
+}
+
+body{
+    display:flex;flex-flow:column nowrap;
+    justify-content:center; align-items:center;
+    gap:20px;
+    min-height:100vh;
+    background:rgb(23, 32, 34);
+}
+
+a{color:#fff; text-decoration:none;}
