@@ -1,0 +1,30 @@
+@charset "utf-8";
+#frm{
+    --_hei:40px;
+    display:flex;flex-flow:row nowrap;
+    justify-content:center; align-items:center;
+    gap:5px;
+    position:relative;
+    padding:30px 60px;
+    background:rgba(0,0,0,.3);
+    border-radius:4px;
+}
+#frm > input,
+#frm > button{
+    height:var(--_hei);
+    font-family:inherit; font-size:inherit;
+    border:none; border-radius:4px;
+}
+
+#frm > input[type="number"]{
+    width:200px;
+    padding:0 1em;
+}
+
+#frm > button{
+    padding:0 20px;
+    background:rgb(105, 181, 105);
+    border:none;
+    text-transform:uppercase;
+    font-weight:bold; font-size:12px;
+}

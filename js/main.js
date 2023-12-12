@@ -1,7 +1,8 @@
 import { Counter } from "./Counter.js";
 
-const cashPrize = 3_456_789;
-// const cashPrize = 123;
+const cashPrize = 9_876_543;
+
+document.getElementsByName('cash-prize')[0].value = cashPrize;
 
 new Counter()
 .set_cash_prize(cashPrize)
