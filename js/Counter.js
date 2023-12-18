@@ -14,7 +14,7 @@ export class Counter {
     }//constructor
 
     set_cash_prize(cashPrize) {
-        this.#cashPrize = String(cashPrize) ?? 0;
+        this.#cashPrize = String(Number(cashPrize)) ?? 0;
         console.log("this.#cashPrize",this.#cashPrize, typeof this.#cashPrize);
         return this;
     }//set_cash_prize
@@ -25,11 +25,13 @@ export class Counter {
         this.$$numberWrap = Array.from(this.$counterWrap.getElementsByClassName(this.clssList.numberWrap));
         this.$form = document.getElementById('frm');
 
-        /* DOM + animation */
-        this.restart();
-
         /* (EVENT) */
         this.$form.addEventListener('submit', this.on_submit_form);
+
+        /* DOM */
+        this.fill_number_wrap();
+
+        return this;
     }//init
 
     restart() {
